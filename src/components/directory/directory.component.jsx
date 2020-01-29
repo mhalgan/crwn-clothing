@@ -5,14 +5,14 @@ import { createStructuredSelector } from "reselect";
 
 import MenuItem from "../../components/menu-item/menu-item.component";
 
-import "./directory.styles.scss";
+import { DirectoryMenuContainer } from "./directory.styles";
 
 const Directory = ({ sections }) => (
-  <div className="directory-menu">
+  <DirectoryMenuContainer>
     {sections.map(({ id, ...otherSectionProps }) => (
       <MenuItem key={id} {...otherSectionProps} />
     ))}
-  </div>
+  </DirectoryMenuContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
