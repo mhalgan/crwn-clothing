@@ -27,7 +27,7 @@ class SignUp extends React.Component {
       alert("passwords don't match");
       return;
     }
-    signUpStart(email, password, displayName);
+    signUpStart({ email, password, displayName });
   };
 
   handleChange = event => {
@@ -82,8 +82,7 @@ class SignUp extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  signUpStart: (email, password, displayName) =>
-    dispatch(signUpStart({ email, password, displayName }))
+  signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });
 
 export default connect(null, mapDispatchToProps)(SignUp);
