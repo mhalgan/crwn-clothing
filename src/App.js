@@ -22,7 +22,7 @@ class App extends React.Component {
     const { setCurrentUser } = this.props;
 
     // Subscribe to firebase auth provider to detect any changes on auth state
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    /*this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
@@ -33,7 +33,7 @@ class App extends React.Component {
       } else {
         setCurrentUser(userAuth);
       }
-    });
+    });*/
   }
 
   componentWillUnmount() {
