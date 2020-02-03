@@ -11,7 +11,6 @@ const StripeCheckoutButton = ({ price }) => {
     axios({
       url: "payment",
       method: "post",
-      baseURL: "http://localhost:5000",
       data: {
         amount: priceForStripe,
         token
