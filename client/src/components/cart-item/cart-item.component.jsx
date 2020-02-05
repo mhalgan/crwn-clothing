@@ -18,4 +18,5 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
   </CartItemContainer>
 );
 
-export default CartItem;
+// Only re-render when new types of items are added to the cart
+export default React.memo(CartItem);
